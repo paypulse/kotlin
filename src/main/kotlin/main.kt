@@ -232,6 +232,8 @@ fun main() {
     println(BasicForProperty.address) // 서울 특별시 로 출력 됨
     BasicForProperty.address = "서울"
 
+    val overLoadingConstructor = OverLoadingConstructor("test이름1")
+    val overLoadingConstructor2 = OverLoadingConstructor("testOverloading", "서울특별시", 40)
 
 
 
