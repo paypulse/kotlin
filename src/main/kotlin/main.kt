@@ -160,6 +160,80 @@ fun main() {
      * 매서드나 함수의 매개변수로 사용 될때, 해당 매개 변수에 여러개의 인자를 전달 할 수 있습니다.
      * 문자열을 여러개 받을 수 있습니다.
      * **/
+    fun <T> newList(vararg ts: T): List<T> {
+        val result = ArrayList<T>()
+
+        for (t in ts)
+            result.add(t)
+        return result
+    }
+
+    val newList = newList(1,2,3)
+
+    // * 스프레드 연산자 이며, item 배열의 요소를 풀어서 넘긴다.
+    val item1 = Array(5) {v -> v+1}
+    val newList2 = newList(*item1)
+
+    println("약간은 어려운 개념 :  " + newList2);
+
+    /**
+     * 확장 함수
+     * 특정 클래스로 부터 상속 받지 않고 해당 클래스의 기능을 확장한다.
+     * */
+    var arrayOf =  arrayOf(1,2,3)
+
+    //Array 클래스의 length 메소드를 overrride 한다.
+    fun <T> Array<T>.length(): Int {
+        return 1
+    }
+
+    //Array 클래스에 새로운 메소드를 추가 한다.
+    fun <T> Array<T>.addMethod(index1: Int, index2: Int): Int {
+        return 1
+    }
+
+    val addMethod = arrayOf.addMethod(1,3)
+    println("addMethod :" + addMethod )
+    val length = arrayOf.length()
+    println("length : " + length)
+
+
+
+    val test1 = arrayOf("http://localhost:3000")
+    println("test1 : "+ test1)
+
+    /**
+     * 중위 함수
+     * 중위 함수 선언은 infix 키워드를 붙여 선언한다.
+     *
+     * 중위 함수의 선언 조건
+     * 클래스의 멤버 함수 이거나 확장 함수이어야 한다.
+     * 매개 변수가 한 개여야 한다.
+     * infix 키워드로 함수가 정의 되어야한다.
+     * **/
+    infix fun Int.multiply(value: Int): Int {
+        return this * value
+    }
+
+    println(9 multiply 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
