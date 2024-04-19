@@ -70,11 +70,109 @@ fun main() {
         else -> "NOT OK"
     }
 
-    val inputString: String?= "4"
+    val inputString: String= "4"
     when {
         inputString == "4" -> println("4 ok")
         msgType1 == "2" -> println("msgType1 = 2")
     }
+
+    /**
+     * For 반복문
+     * **/
+    val item = arrayOf(1,2,3)
+    var list = listOf(1,2,3)
+
+    for(index in item.indices){
+        println("get out of item : " + index)
+    }
+
+    for(index in list.indices){
+        println("index : " + index)
+    }
+
+    /** 1부터 100까지 반복  **/
+    for(i in 1..100){
+        //println("$i")
+    }
+
+    /**  1부터 99까지 반복 **/
+    for(i in 1 until 100){
+        println("$i")
+    }
+
+    /** 2 부터 10까지 반복, 2씩 증가  **/
+    for(i in 2..10 step 2){
+        print("$i")
+    }
+
+    /** 10 부터 1까지 감소  **/
+    for (i in 10 downTo 1){
+        print("$i")
+    }
+
+    /**
+     * while 반복문
+     * **/
+    val arrayForItem = Array(5) { v -> v+1}
+    var index1 = 0
+
+    while (index1 <arrayForItem.size){
+        println(":: arrayForItem :: " + arrayForItem[index1])
+        index1++
+    }
+
+    /**
+     * 함수
+     * */
+    //기본적인 방식
+    fun basicFunc(name: String): Int {
+        return name.toInt()
+    }
+
+    //한줄에 선언하는 방식
+    fun simpleFunc(name: String)=name.toInt()
+
+    //ex1
+    fun doPostUserFindUserIdCode(
+        baseReq: Int,
+        req: String,
+    ): String = name.toString()
+
+    /**
+     * 기본 매개변수
+     * **/
+    fun simpleFunc(name: String="김찬정", age: Int): String {
+        return name
+    }
+
+    /**
+     * 명명된 매개변수
+     * */
+    fun simpeFunc2(name: String, age: Int =10) = name3
+
+    var name5 = simpeFunc2("test",10)
+    var name6 = simpeFunc2(name="test2", age= 40)
+    var name7 = simpeFunc2(age=10, name="test3")
+
+    /**
+     * 함수 호출 시 가변인자.
+     * **/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
