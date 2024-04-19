@@ -216,7 +216,21 @@ fun main() {
     }
 
     println(9 multiply 1)
+    println(9.multiply(1))
+    println(3 + 2 multiply  2 )
 
+    //
+    var rtn = SimpleClass("test","test1")
+    println(rtn.age)
+    println(rtn.name)
+    println(rtn.address)
+
+    var rtn1 = BasicClass("name","address", 22)
+
+
+    val BasicForProperty = BasicForProperty("김찬정", "서울", 10)
+    println(BasicForProperty.address) // 서울 특별시 로 출력 됨
+    BasicForProperty.address = "서울"
 
 
 
