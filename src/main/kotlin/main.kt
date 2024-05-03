@@ -241,6 +241,20 @@ fun main() {
 
 
 
+    //<editor-fold desc="lateinit예제">
+    var obj = TestClass();
+    obj.Test()
+    println(obj.lateInitializedString)
+    //</editor-fold>
+
+
+
+    //companion object
+    val instance = CompanionObjectTest.create()
+    println(CompanionObjectTest.someProperty)
+
+
+
 
 
 
